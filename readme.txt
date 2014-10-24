@@ -3,8 +3,8 @@ Contributors: Yslo
 Tags: automatic, admin, plugin, core, cookie, timeout, user, authentication, session, remember, remember me
 Requires at least: 3.0
 
-Tested up to: 3.9
-Stable tag: 1.0.0
+Tested up to: 4.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,6 +18,7 @@ Allows you the ability to set login timeout Settings panel.
 
 * Set default login timeout
 * Set login 'Remember me' timeout
+* Set special timeout for Users with a specific capability. eg. : You can set longer/shorter login timeout to Administrators using \"edit_theme_options\" capability. (see <a href=\"http://codex.wordpress.org/Roles_and_Capabilities\" target=\"_blank\">Roles and Capabilities in Wordpress Codex</a>)
 * Use default Wordpress behaviors
 * Add Updates panel (Settings > Login timeout)
 * Contextual Help
@@ -40,10 +41,13 @@ You will find 'Excerpt' menu in your WordPress Settings panel.
 == Screenshots ==
 
 1. Activate the plugin
-2. Link to Excerpt panel
+2. Link to Login Timeout Settings
 3. Login Timeout Settings panel
 
 == Changelog ==
+
+= 1.1.0 =
+* Add feature special timeout
 
 = 1.0.0 =
 * Initial version
