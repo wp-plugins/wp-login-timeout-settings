@@ -36,7 +36,7 @@ Allows you the ability to set login timeout Settings panel.
 1. Download and extract plugin files to wp-content/plugin directory.
 2. Activate the plugin through the WordPress admin interface.
 
-You will find 'Excerpt' menu in your WordPress Settings panel.
+You will find 'Login timeout' menu in your WordPress Settings panel.
 
 == Screenshots ==
 
