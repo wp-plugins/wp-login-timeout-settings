@@ -18,7 +18,7 @@ Allows you the ability to set login timeout Settings panel.
 
 * Set default login timeout
 * Set login 'Remember me' timeout
-* Set special timeout for Users with a specific capability. eg. : You can set longer/shorter login timeout to Administrators using \"edit_theme_options\" capability. (see <a href=\"http://codex.wordpress.org/Roles_and_Capabilities\" target=\"_blank\">Roles and Capabilities in Wordpress Codex</a>)
+* Set special timeout for Users with a specific capability. eg. : You can set longer/shorter login timeout to Administrators using "edit_theme_options" capability. (see <a href=\"http://codex.wordpress.org/Roles_and_Capabilities\" target=\"_blank\">Roles and Capabilities in Wordpress Codex</a>)
 * Use default Wordpress behaviors
 * Add Updates panel (Settings > Login timeout)
 * Contextual Help
