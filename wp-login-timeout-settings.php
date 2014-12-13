@@ -4,7 +4,7 @@ Plugin Name: WP Login Timeout Settings
 Plugin URI: http://wordpress.org/plugins/wp-login-timeout-settings/
 Description: Configure WordPress Login Timeout through UI (User Interface).
 Author: Yslo
-Version: 1.1.0
+Version: 1.1.1
 Author URI: http://profiles.wordpress.org/yslo/
 */
 
@@ -13,17 +13,18 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 class WP_Login_Timeout_Settings
 {
 	// Define version
-	const VERSION = '1.1.0';
+	const VERSION = '1.1.1';
 
 	var $wp_login_timeout_options;
 	var $wp_login_timeout_admin_page;
 	var $capabilities_list;
+	var $user_level;
 
 	function __construct()
 	{
 		$this->wp_login_timeout_options = get_option('wp_login_timeout_options');
 
-		$user_level = array('level_0', 'level_1', 'level_2', 'level_3', 'level_4', 'level_5', 'level_6', 'level_7', 'level_8', 'level_9', 'level_10');		
+		$this->user_level = array('level_0', 'level_1', 'level_2', 'level_3', 'level_4', 'level_5', 'level_6', 'level_7', 'level_8', 'level_9', 'level_10');		
 
 		$roles = get_role('administrator');
 		$roles = $roles->capabilities;
@@ -31,7 +32,7 @@ class WP_Login_Timeout_Settings
 
 		foreach($roles as $capabilitie)
 		{
-			if(!in_array($capabilitie, $user_level)) {
+			if(!in_array($capabilitie, $this->user_level)) {
 				$this->capabilities_list[] = $capabilitie;
 			}
 		}
@@ -258,7 +259,7 @@ class WP_Login_Timeout_Settings
 		
 		foreach($this->capabilities_list as $capabilitie)
 		{
-			if(!in_array($capabilitie, $user_level)) {
+			if(!in_array($capabilitie, $this->user_level)) {
 				echo '<option value="' . $capabilitie . '"' . selected( $option_value, $capabilitie, false ) . '>' . $capabilitie . '</option>';
 			}
 		}
