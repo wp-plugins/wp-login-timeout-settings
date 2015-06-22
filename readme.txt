@@ -3,8 +3,8 @@ Contributors: Yslo
 Tags: automatic, admin, plugin, core, cookie, timeout, user, authentication, session, remember, remember me
 Requires at least: 3.0
 
-Tested up to: 4.0
-Stable tag: 1.1.1
+Tested up to: 4.2
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,9 @@ You will find 'Login timeout' menu in your WordPress Settings panel.
 3. Login Timeout Settings panel
 
 == Changelog ==
+
+= 1.1.2 =
+* Fix : notice on WP_DEBUG is true
 
 = 1.1.1 =
 * Fix : remove user_level form capabilities
