@@ -4,7 +4,7 @@ Plugin Name: WP Login Timeout Settings
 Plugin URI: http://wordpress.org/plugins/wp-login-timeout-settings/
 Description: Configure WordPress Login Timeout through UI (User Interface).
 Author: Yslo
-Version: 1.1.1
+Version: 1.1.2
 Author URI: http://profiles.wordpress.org/yslo/
 */
 
@@ -13,7 +13,7 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 class WP_Login_Timeout_Settings
 {
 	// Define version
-	const VERSION = '1.1.1';
+	const VERSION = '1.1.2';
 
 	var $wp_login_timeout_options;
 	var $wp_login_timeout_admin_page;
@@ -303,7 +303,7 @@ class WP_Login_Timeout_Settings
 		$valid['rememberme_timeout'] = (empty($input['rememberme_timeout']) || intval($input['rememberme_timeout']) == false || intval($input['rememberme_timeout']) < 1) ? 14 : intval($input['rememberme_timeout']);
 		$valid['rememberme_timeout_unit'] = (empty($input['rememberme_timeout']) || empty($input['rememberme_timeout_unit']) || intval($input['rememberme_timeout_unit']) == false|| intval($input['rememberme_timeout']) < 1) ? 86400 : intval($input['rememberme_timeout_unit']);
 
-		if(filter_var($input['activate_capabilities_timeout'], FILTER_VALIDATE_BOOLEAN))
+		if(isset($input['activate_capabilities_timeout']) && filter_var($input['activate_capabilities_timeout'], FILTER_VALIDATE_BOOLEAN))
 			$valid['activate_capabilities_timeout'] = $input['activate_capabilities_timeout'];
 
 		$valid['capabilities_timeout'] = (empty($input['capabilities_timeout']) || intval($input['capabilities_timeout']) == false || intval($input['capabilities_timeout']) < 1) ? 2 : intval($input['capabilities_timeout']);
